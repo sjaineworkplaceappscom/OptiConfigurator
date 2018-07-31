@@ -6,6 +6,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LeftComponent } from './common/left/left.component';
+import { RightComponent } from './common/right/right.component';
+import { TopComponent } from './common/top/top.component';
+import { LoginComponent } from './login/login.component';
 
 import { FormsModule } from '@angular/forms';
 
@@ -34,7 +38,11 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LeftComponent,
+    RightComponent,
+    TopComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
