@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  userName: string;
+  password: string;
+ 
   constructor() { }
 
-  ngOnInit() {
-  }
+  @ViewChild('myCanvas') myCanvas;
 
+  ngOnInit() {
+    this.userName = '';
+    this.password = '';
+   
+    const element = document.getElementsByTagName("body")[0];
+    element.className = "";
+    element.classList.add("opti_body-login");
+    element.classList.add("opti_account-module");
+  }
 }
